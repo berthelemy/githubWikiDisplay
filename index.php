@@ -10,19 +10,74 @@ $files = array();
 $dir = opendir($wikiDir); // open the cwd..also do an err check.
 while(false != ($file = readdir($dir))) {
         if(($file != ".") and ($file != "..") and ($file != "index.php")) {
+                
                 $files[] = $file; // put in array.
+
         }   
 }
 
-natsort($files); // sort.
 
-// Get file to display from URL
+natsort($files); // sort files
 
-$fileName = $_GET['file'];
+// Go through each file and create a multi-dimensional array of files, page titles and categories
+
+$pages = array();
+foreach ($files as $file) {
+    
+                $category = current(explode("--", $file)); // extract category name
+
+//                echo $category;
+
+                $page['category']= $category;
+
+
+                // Extract page name (removing category)
+                $arr = explode('--', $file);
+                $pageName = $arr[1];
+
+                $pageName = str_replace(".md", "", $pageName); // remove extension
+                $pageName = str_replace("-", " ", $pageName); // replace - with space
+                
+//                echo $pageName;
+
+                $page['pageName'] = $pageName;
+
+                $fileName = $file;
+
+ //               echo $fileName;
+
+                $page['fileName'] = $fileName;
+
+                $pages[] = $page;
+
+
+                
+                // Add details to array of pages
+                //$pages['category'][] = $category;
+                // $pages['name'][] = $name;
+                
+
+}
+
+
+
+
+
+
+// Get markdown file to display from URL
+
+$URLfileName = $_GET['file'];
+$URLcategory = current(explode("--", $URLfileName)); // extract category name to display in breadcrumb trail
+// Tidy up file name to display in page title
+$arr = explode('--', $URLfileName);
+                $URLpageName = $arr[1];
+
+                $URLpageName = str_replace(".md", "", $URLpageName); // remove extension
+                $URLpageName = str_replace("-", " ", $URLpageName); // replace - with space
 
 // Put contents of file into string
 
-$fileContents = file_get_contents($wikiDir.'/'.$fileName);
+$fileContents = file_get_contents($wikiDir.'/'.$URLfileName);
 
 // Translate from markdown to HTML
 
@@ -30,7 +85,7 @@ $fileHtml = \Michelf\Markdown::defaultTransform($fileContents);
 
 // Create page title
 
-$pageTitle = substr($fileName,0,-3);
+$pageTitle = substr($URLfileName,0,-3);
 
 ?>
 
@@ -65,20 +120,24 @@ $pageTitle = substr($fileName,0,-3);
             <!-- Sidebar -->
       <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
-          <li class="sidebar-brand"><a href="#">GitHub Wiki Player</a></li>
+          <li class="sidebar-brand"><a href=".">GitHub Wiki Player</a></li>
             <?php
           // print list of files in wiki
-            foreach($files as $file) {
-                echo('<li><a href="index.php?file='.$file.'"">'.$file.'</a></li>');
+
+            $categoryTemp = '';
+
+            foreach($pages as $page) { 
+                $category = $page['category'];
+                if($category != $categoryTemp) {
+                    echo($page['category']);
+                    $categoryTemp = $category; // TODO: Change this to collapsible list
+                }
+                
+                echo('<li><a href="index.php?file='.$page['fileName'].'">'.$page['pageName'].'</a></li>');
+
                 }
             ?>
-          <li><a href="#">Category 1</a></li>
-          <li><a href="#">Category 2</a></li>
-          <li><a href="#">Category 3</a></li>
-          <li><a href="#">Category 4</a></li>
-          <li><a href="#">Category 5</a></li>
-          <li><a href="#">Category 6</a></li>
-          <li><a href="#">Category 7</a></li>
+          
         </ul>
       </div>
 
@@ -88,15 +147,6 @@ $pageTitle = substr($fileName,0,-3);
         <p>These documents are automatically created from the application wiki on GitHub.</p>
         <p>If they are wrong please make a suggestion for the change via the <a href="#">Issues page</a>, or, if you're a project contributor, please edit the <a href="#">wiki</a> directly. 
       </div>
-
-
-    <ol class="breadcrumb">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Category</a></li>
-        <li class="active"><?php echo $pageTitle;?></li>
-    </ol>
-
-
       
       
           
@@ -106,7 +156,7 @@ $pageTitle = substr($fileName,0,-3);
           <h1>
             <a id="menu-toggle" href="#" class="btn btn-default"><i class="icon-reorder"></i></a>
             <?php
-                echo $pageTitle;
+                echo $URLcategory.' / '.$URLpageName;
                 ?>
           </h1>
         </div>
