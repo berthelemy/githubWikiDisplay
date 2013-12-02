@@ -1,0 +1,453 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cat",
+				"category"
+			],
+			[
+				"cate",
+				"categoryTemp"
+			],
+			[
+				"URL",
+				"URLcategory"
+			],
+			[
+				"UR",
+				"URLpageName"
+			],
+			[
+				"arr",
+				"array	$… = array (…)"
+			],
+			[
+				"page",
+				"pageName"
+			],
+			[
+				"categ",
+				"category"
+			],
+			[
+				"file",
+				"fileName"
+			],
+			[
+				"pa",
+				"pageName"
+			],
+			[
+				"array",
+				"array_chunk"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"str_rep",
+				"str_replace"
+			],
+			[
+				"php",
+				"php"
+			],
+			[
+				"im",
+				"background-image"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"out",
+				"outputFileName"
+			],
+			[
+				"course",
+				"courseFileName"
+			],
+			[
+				"userFil",
+				"userFileName"
+			],
+			[
+				"ar",
+				"arg"
+			],
+			[
+				"__",
+				"__name__"
+			],
+			[
+				"wsl_",
+				"wsl_helloworld"
+			],
+			[
+				"wsl_he",
+				"wsl_helloworld_menu"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"margi",
+				"margin-left"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"margn",
+				"margin-right"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.php",
+			"settings":
+			{
+				"buffer_size": 5850,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "TODO.md",
+			"settings":
+			{
+				"buffer_size": 316,
+				"line_ending": "Unix",
+				"name": "TODO"
+			}
+		},
+		{
+			"file": "config.php",
+			"settings":
+			{
+				"buffer_size": 71,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sidebar.php",
+			"settings":
+			{
+				"buffer_size": 439,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Code Folding: Fold Tag Attributes"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/markberthelemy/Documents/Websites/githubWikiDisplay/wiki/markdown 1 file.mdown",
+		"/Users/markberthelemy/temp/Why is it so complicated?",
+		"/Users/markberthelemy/temp/Is Moodle the only answer?",
+		"/Users/markberthelemy/Documents/Wyver Solutions/wordpress_plugins",
+		"/Users/markberthelemy/temp/testGit/test.txt",
+		"/Users/markberthelemy/Documents/Wyver Solutions/Clients/i-to-i/Project/i-to-i Newdle project copy.merlin2",
+		"/Users/markberthelemy/Documents/Wyver Solutions/Clients/NIHR/Xerte/customStyle.css",
+		"/Users/markberthelemy/Google Drive/KPMG_NHS/Virtual Campus/Support/cookies policy 0.2.html",
+		"/Users/markberthelemy/Documents/Code/python/csv_manip/csv_manip.py",
+		"/Users/markberthelemy/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/markberthelemy/Documents/Websites/www.e-i.org/index.html",
+		"/Users/markberthelemy/Documents/Websites/wordpress2/wp-content/plugins/wsl_helloworld/wsl_helloworld.php",
+		"/Users/markberthelemy/Documents/Websites/wordpress2/wp-content/plugins/sb-child-list/sb_child_list.php",
+		"/Users/markberthelemy/Documents/Websites/wyverlearning/wp-config.php",
+		"/Users/markberthelemy/Documents/Websites/DefAc_NMP/help.html",
+		"/Users/markberthelemy/Documents/Websites/DefAc_NMP/documents.html",
+		"/Users/markberthelemy/Documents/Websites/DefAc_NMP/tasks.html",
+		"/Users/markberthelemy/Documents/Websites/DefAc_NMP/team.html",
+		"/Users/markberthelemy/Documents/Websites/DefAc_NMP/lib/colorbox/colorbox.css",
+		"/Users/markberthelemy/Documents/Websites/DefAc_NMP/bootstrap/css/bootstrap-responsive.css",
+		"/Users/markberthelemy/Documents/Websites/DefAc_NMP/header.html",
+		"/Users/markberthelemy/Documents/Websites/DefAc_NMP/menu.html",
+		"/Users/markberthelemy/Documents/Websites/DefAc_NMP/index_old.html",
+		"/Users/markberthelemy/Documents/Websites/DefAc_NMP/index.html",
+		"/Users/markberthelemy/Documents/Websites/DefAc_NMP/bootstrap/css/bootstrap.css",
+		"/Users/markberthelemy/Documents/Websites/DefAc_NMP/css/css_overrides.css",
+		"/Users/markberthelemy/Documents/Websites/DefAc_NMP/head.html"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			";\n",
+			"•   ",
+			"arg",
+			" width=\"...\"",
+			" width=\"298\"",
+			" width=\"145\"",
+			"</ul>",
+			"</li>",
+			"<a href=\"http://localhost/DefAc_NMP/index.html#\" style=\"margin: 0px; padding: 5px; color: rgb(102, 102, 102); text-decoration: none; border: 1px solid rgb(204, 204, 204); font-family: arial, verdana, tahoma; font-size: 11px; display: inline-block; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; -webkit-transition: all 0.5s;\"></a>",
+			"<li style=\"margin: 0px; padding: 20px 5px 0px; float: left; text-align: center; list-style-type: none; position: relative; -webkit-transition: all 0.5s;\">",
+			"<ul style=\"margin: 0px 0px 0px 25px; padding: 20px 0px 0px; position: relative; -webkit-transition: all 0.5s; color: rgb(51, 51, 51); font-family: 'helvetica neue', helvetica, arial, sans-serif; font-size: 14px; line-height: 20px; text-align: center;\">\n                            <li style=\"margin: 0px; padding: 20px 5px 0px; float: left; text-align: center; list-style-type: none; position: relative; -webkit-transition: all 0.5s;\">\n                                <a href=\"http://localhost/DefAc_NMP/index.html#\" style=\"margin: 0px; padding: 5px; color: rgb(0, 0, 0); text-decoration: none; outline: 0px; border: 1px solid rgb(148, 160, 180); font-family: arial, verdana, tahoma; font-size: 11px; display: inline-block; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; -webkit-transition: all 0.5s; background-color: rgb(200, 228, 248);\"></a>",
+			"<br>",
+			" class=\"name\" style=\"margin: 0px 0px 10px; padding: 0px;\"",
+			" style=\"margin: 0px; padding: 0px;\"",
+			" class=\"role\" style=\"margin: 0px 0px 10px; padding: 0px;\"",
+			"<a href=\"http://localhost/DefAc_NMP/index.html#\" style=\"margin: 0px; padding: 5px; color: rgb(0, 0, 0); text-decoration: none; outline: 0px; border: 1px solid rgb(148, 160, 180); font-family: arial, verdana, tahoma; font-size: 11px; display: inline-block; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; -webkit-transition: all 0.5s; background-color: rgb(200, 228, 248); line-height: 20px; text-align: center;\"></a>",
+			" width=\"14%\"",
+			"  ",
+			"width=\"14%\"",
+			"<a href=\"http://localhost/DefAc_NMP/index.html#\" style=\"margin: 0px; padding: 5px; color: rgb(0, 0, 0); text-decoration: none; outline: 0px; border: 1px solid rgb(148, 160, 180); font-family: arial, verdana, tahoma; font-size: 11px; display: inline-block; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; -webkit-transition: all 0.5s; background-color: rgb(200, 228, 248); line-height: 20px; text-align: center;\"></a>",
+			" ;",
+			"span1",
+			"span8",
+			"images",
+			">\n",
+			"(images",
+			"class=\"fancybox fancybox.ajax\"",
+			"position",
+			"height",
+			"absolute",
+			"position"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"",
+			"<br />",
+			"",
+			"(./images"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.php",
+					"settings":
+					{
+						"buffer_size": 5850,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3968,
+								3968
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "TODO.md",
+					"settings":
+					{
+						"buffer_size": 316,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								315,
+								315
+							]
+						],
+						"settings":
+						{
+							"auto_name": "TODO",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "config.php",
+					"settings":
+					{
+						"buffer_size": 71,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								66,
+								66
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "sidebar.php",
+					"settings":
+					{
+						"buffer_size": 439,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								439,
+								439
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 112.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 281.0,
+	"status_bar_visible": true
+}

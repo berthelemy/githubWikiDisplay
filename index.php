@@ -1,7 +1,18 @@
 <?php
-include 'config.php';
+include 'config.php'; // Include configuration settings
 
-require_once 'php-markdown-lib/Michelf/Markdown.php';
+$homePageURL = "./index.php?file=".$homePage;
+
+require_once 'php-markdown-lib/Michelf/Markdown.php'; // Include Markdown parser
+
+function createPageName($fname) {
+
+    $name = str_replace(".md", "", $fname); // remove extension
+    $name = str_replace("-", " ", $name); // replace - with space
+
+    return $name;
+
+}
 
 
 // Get list of files in wiki directory - to show in menu
@@ -23,57 +34,45 @@ natsort($files); // sort files
 
 $pages = array();
 foreach ($files as $file) {
-    
-                $category = current(explode("--", $file)); // extract category name
 
-//                echo $category;
+// Check if file has a category
+    if (strpos($file, '--') != true) {
 
-                $page['category']= $category;
+        $category = 'Uncategorized';
+        $pageName = $file;
+        } else {
+// if file doesn't have a category, then extract it, leaving the page name
+        $arr = explode('--', $file);
+        $category = $arr[0];
+        $pageName = $arr[1];
+        }
 
+// Now setup the $page array
+    $page['category']= $category; // Setup $page array: category                
 
-                // Extract page name (removing category)
-                $arr = explode('--', $file);
-                $pageName = $arr[1];
+    $page['pageName'] = createPageName($pageName); // Make name to go in menu - put in $page array: pageName
 
-                $pageName = str_replace(".md", "", $pageName); // remove extension
-                $pageName = str_replace("-", " ", $pageName); // replace - with space
-                
-//                echo $pageName;
+    $page['fileName'] = $file; // Put filename in $page array: fileName
 
-                $page['pageName'] = $pageName;
+    $pages[] = $page; // Add this set of page items to the $pages array
 
-                $fileName = $file;
-
- //               echo $fileName;
-
-                $page['fileName'] = $fileName;
-
-                $pages[] = $page;
-
-
-                
-                // Add details to array of pages
-                //$pages['category'][] = $category;
-                // $pages['name'][] = $name;
-                
-
-}
-
-
-
-
+} // end of Foreach
 
 
 // Get markdown file to display from URL
 
-$URLfileName = $_GET['file'];
-$URLcategory = current(explode("--", $URLfileName)); // extract category name to display in breadcrumb trail
+$URLfileName = $_GET['file']; // Pick up the filename from the URL
+if (strpos($URLfileName, '--') != true) {
+    $URLcategory = '';
+    $URLpageName = createPageName($URLfileName);
+} else {
+    $URLcategory = current(explode("--", $URLfileName)); // extract category name to display in breadcrumb trail
 // Tidy up file name to display in page title
-$arr = explode('--', $URLfileName);
-                $URLpageName = $arr[1];
+    $arr = explode('--', $URLfileName);
+    $URLpageName = $arr[1]; // Page name = 2nd element in the exploded array
+    $URLpageName = createPageName($URLpageName);
+}
 
-                $URLpageName = str_replace(".md", "", $URLpageName); // remove extension
-                $URLpageName = str_replace("-", " ", $URLpageName); // replace - with space
 
 // Put contents of file into string
 
@@ -84,15 +83,14 @@ $fileContents = file_get_contents($wikiDir.'/'.$URLfileName);
 $fileHtml = \Michelf\Markdown::defaultTransform($fileContents);
 
 // Create page title
-
-$pageTitle = substr($URLfileName,0,-3);
+$pageTitle = $application.' Documentation > '.$URLcategory.' > '.$URLpageName;
 
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title><?php echo $application; ?> > Documentation</title>
+    <title><?php echo $pageTitle ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
@@ -120,7 +118,7 @@ $pageTitle = substr($URLfileName,0,-3);
             <!-- Sidebar -->
       <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
-          <li class="sidebar-brand"><a href=".">GitHub Wiki Player</a></li>
+          <li class="sidebar-brand"><a href="<?php $homePageURL;?>">GitHub Wiki Player</a></li>
             <?php
           // print list of files in wiki
 
