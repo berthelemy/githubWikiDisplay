@@ -1,0 +1,3 @@
+[submodule "wiki"]
+	path = wiki
+	url = https://berthelemy@github.com/berthelemy/githubWikiDisplay.wiki.git
